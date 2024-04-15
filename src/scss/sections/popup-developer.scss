@@ -1,0 +1,190 @@
+.developer-popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 40px;
+
+    @include _575-block {
+        padding: 20px 16px;
+    }
+
+    // .developer-popup__wrapper
+    &__wrapper {
+        max-width: 1168px;
+        min-height: 0;
+        height: auto;
+        padding: 0;
+        background-color: #fff;
+        @include _991-block {
+            max-width: 700px;
+            height: 70vh;
+        }
+
+        @include _767-block {
+            max-width: 400px;
+        }
+    }
+
+    // .developer-popup__close
+    &__close {
+    }
+
+    // .developer-popup__inner
+    &__inner {
+        @include _991-block {
+            height: 100%;
+            overflow: scroll;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+
+    // .developer-popup__content
+    &__content {
+        position: relative;
+        z-index: 4;
+        width: 100%;
+        padding: 40px 20px 60px;
+        @include _991-block {
+            padding: 30px 20px;
+        }
+        @include _767-block {
+            padding: 30px 10px;
+        }
+    }
+
+    // .developer-popup__sub
+    &__sub {
+        font-size: 24px;
+        line-height: 29px;
+        text-transform: uppercase;
+        text-align: center;
+        color: #919191;
+        font-weight: 400;
+    }
+
+    // .developer-popup__title
+    &__title {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 1.14;
+        text-align: center;
+        text-transform: capitalize;
+        color: #221f20;
+
+        @include _991-block {
+            font-size: 32px;
+        }
+    }
+
+    // .developer-popup__content-wrapper
+    &__content-wrapper {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: 930px;
+        width: 100%;
+        margin: 28px auto 0;
+        gap: 40px;
+
+        @include _991-block {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10px;
+        }
+    }
+
+    // .developer-popup__info
+    &__info {
+        max-width: 700px;
+        width: 100%;
+    }
+
+    // .developer-popup__content-img
+    &__content-img {
+        img {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @include _767-block {
+            height: 180px;
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    // .developer-popup__content-texts
+    &__content-texts {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        max-width: 700px;
+        gap: 55px;
+        margin-top: 20px;
+
+        @include _991-block {
+            gap: 20px;
+            gap: 16px 30px;
+        }
+
+        @include _767-block {
+            flex-direction: column;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 1.4;
+            max-width: 332px;
+            @include _767-block {
+                max-width: 100%;
+            }
+        }
+    }
+
+    // .developer-popup__statis
+    &__statis {
+        display: grid;
+        gap: 30px;
+        @include _991-block {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            max-width: 600px;
+            width: 100%;
+        }
+
+        @include _767-block {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    // .developer-popup__statis-item
+    &__statis-item {
+        display: grid;
+        gap: 5px;
+    }
+
+    // .developer-popup__statis-num
+    &__statis-num {
+        font-size: 50px;
+        font-weight: 700;
+        line-height: normal;
+        text-align: center;
+        color: #221f20;
+    }
+
+    // .developer-popup__statis-text
+    &__statis-text {
+        font-size: 14px;
+        line-height: normal;
+        text-align: center;
+        text-transform: uppercase;
+        color: #919191;
+    }
+}

@@ -1,0 +1,73 @@
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--vh);
+    z-index: 9999;
+    transition: opacity 1.2s $transition, visibility 1.2s $transition;
+
+    &__pl {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px;
+        background-color: $cb;
+        transition: transform 1.2s $transition;
+    }
+    &__logo {
+        position: relative;
+        display: grid;
+        &_default {
+            grid-area: 1/1;
+            opacity: 0.2;
+        }
+        &_loading {
+            grid-area: 1/1;
+            width: 0%;
+            overflow: hidden;
+            position: relative;
+            transition: width 0.6s $transition;
+        }
+        img {
+            width: 383px;
+            height: auto;
+            @include _575-block {
+                width: 300px;
+            }
+        }
+    }
+    &__video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    &__percent {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 20px;
+        color: $cw;
+    }
+}
+
+body {
+    overflow: hidden;
+    &.loaded {
+        overflow-y: overlay;
+        overflow-x: clip;
+    }
+}

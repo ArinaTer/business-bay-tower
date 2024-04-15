@@ -1,0 +1,144 @@
+.modal360 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: rgba(0, 0, 0, 0.75);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.4s ease;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transition: 0.4s ease;
+    }
+
+    // .modal360__wrapper
+    &__wrapper {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 9;
+        width: 85vw;
+        height: 85vh;
+        pointer-events: auto;
+        background-color: #000;
+
+        &::after {
+            content: "LOADING...";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        @include _575-block {
+            width: 100vw;
+            height: var(--vh);
+        }
+    }
+
+    // .modal360__close-btn
+    &__close-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-100%);
+        padding-bottom: 6px;
+        z-index: 11;
+
+        @include _575-block {
+            top: 20px;
+            right: 10px;
+            transform: translateY(0);
+            padding: 0;
+        }
+    }
+
+    .close-modal360.hide,
+    .close-modal360.hide-hard {
+        @include _575-block {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    // .modal360__close-btn-ico
+    &__close-btn-ico {
+        width: 26px;
+        height: auto;
+        position: relative;
+
+        &::after,
+        &::before {
+            content: "";
+            width: 100%;
+            height: 2px;
+            background-color: #fff;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(50%) rotate(45deg);
+        }
+
+        &::before {
+            transform: translateY(50%) rotate(-45deg);
+        }
+    }
+
+    // .modal360__iframe
+    &__iframe {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 9;
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        @include _575-block {
+            height: var(--vh);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+
+    h5,
+    p {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 1;
+        text-align: center;
+        color: #fff;
+        opacity: 0.7;
+
+        @include _575-block {
+            opacity: 1;
+        }
+    }
+
+    h5 {
+        border: 1px solid #fff;
+        padding: 2px 2px;
+    }
+
+    p {
+        font-size: 20px;
+    }
+}

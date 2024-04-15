@@ -1,0 +1,87 @@
+@mixin flex($jc: center, $ai: center) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin inline-flex($jc: center, $ai: center) {
+    display: inline-flex;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin bg($url: "", $x: center, $y: center, $size: cover, $repeat: no-repeat) {
+    background-image: url($url);
+    background-size: $size;
+    background-repeat: $repeat;
+    background-position: $x $y;
+}
+
+@mixin _1559-block {
+    @media (max-width: 1559.98px) {
+        @content;
+    }
+}
+
+@mixin _1399-block {
+    @media (max-width: 1399.98px) {
+        @content;
+    }
+}
+
+@mixin _1199-block {
+    @media (max-width: 1199.98px) {
+        @content;
+    }
+}
+
+@mixin _991-block {
+    @media (max-width: 991.98px) {
+        @content;
+    }
+}
+
+@mixin _767-block {
+    @media (max-width: 767.98px) {
+        @content;
+    }
+}
+
+@mixin _575-block {
+    @media (max-width: 575.98px) {
+        @content;
+    }
+}
+
+@mixin _420-block {
+    @media (max-width: 420.98px) {
+        @content;
+    }
+}
+
+// width
+@mixin r($width) {
+    @media only screen and (max-width: #{$width + "px"}) {
+        @content;
+    }
+}
+@mixin rmin($width) {
+    @media only screen and (min-width: #{$width + "px"}) {
+        @content;
+    }
+} // height
+@mixin rh($height) {
+    @media only screen and (max-height: #{$height + "px"}) {
+        @content;
+    }
+}
+@mixin rhmin($height) {
+    @media only screen and (min-height: #{$height + "px"}) {
+        @content;
+    }
+} // width height
+@mixin rrh($height, $width) {
+    @media (max-width: #{$width + "px"}) and (max-height: #{$height + "px"}) {
+        @content;
+    }
+}
