@@ -79,7 +79,7 @@ export function masterplan() {
         document.documentElement.style.setProperty("--aspect-ratio-width", aspectRatioWidth);
     }
 
-    mm.add("(max-width: 1480px)", () => {
+    mm.add("(max-width: 1350px)", () => {
         Draggable.create(".masterplan__media", {
             bounds: ".masterplan__wrapper",
             type: "x",

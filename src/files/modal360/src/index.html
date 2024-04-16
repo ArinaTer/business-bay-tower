@@ -81,8 +81,11 @@
       @@include('./html/sections/viewer_parts/nav.html')
     </div>
   </main>
-  @@include('html/sections/gallery/index.html')
-  @@include('html/sections/popups.html')
+  <div class="gallery">
+    @@loop('html/sections/gallery/index.html', 'html/sections/gallery/index.json')
+  </div>
+  @@include('html/sections/popups/info_popup.html', {"subtitle": "Business Bay", "title": "Perched majestically at the epicenter of Business Bay, amidst the glittering skyline of Dubai, the tower boasts an unrivaled position, offering discerning residents an exclusive retreat in the lap of luxury.", "text2": "With its prestigious address and unparalleled amenities, Business Bay Tower sets a new standard for sophistication and elegance."})
+  @@include('html/sections/popups/floorplan_popup.html')
   <script type="importmap">
       {
         "imports": {
@@ -118,7 +121,7 @@
         "Please view this site in a modern browser that supports CSS Variables."
       );
   </script>
-  <!-- <script type="module" src="https://fnst.axflare.com/landings/global-script/landings-global-script.js"></script> -->
+  <script type="module" src="https://fnst.axflare.com/landings/global-script/landings-global-script.js"></script>
 </body>
 
 </html>

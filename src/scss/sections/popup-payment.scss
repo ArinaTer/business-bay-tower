@@ -144,13 +144,18 @@
         align-items: center;
         justify-content: space-between;
         margin: 0 auto;
-        max-width: 914px;
+        max-width: 930px;
+        width: 100%;
         overflow: hidden;
     }
 
     .swiper-button-prev,
     .swiper-button-next {
         cursor: pointer;
+        display: none;
+        @include _991-block {
+            display: block;
+        }
     }
 
     // .payment__swiper-wrapper
@@ -256,7 +261,7 @@
             }
 
             &::after {
-                content: url("../img/icons/normal-arrow-white.svg");
+                content: url("https://d3b6muno9lbfvx.cloudfront.net/valori-vr/img/icons/normal-arrow-white.svg");
                 line-height: 0;
                 transition: 0.4s ease;
             }

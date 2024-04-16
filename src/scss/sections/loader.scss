@@ -35,7 +35,7 @@
             transition: width 0.6s $transition;
         }
         img {
-            width: 383px;
+            width: 1000px;
             height: auto;
             @include _575-block {
                 width: 300px;
