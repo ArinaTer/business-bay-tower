@@ -239,18 +239,18 @@
     @media (min-width: 1600px) {
       transform: translateY(-8%);
     }
-    @media (min-width: 1512px) {
-      transform: translateY(-2%);
-    }
-    @media (min-width: 1503px) {
-      transform: translateY(-9%);
-    }
-    @media (min-width: 1440px) {
-      transform: translateY(-4%);
-    }
-    @media (max-width: 1439px) {
-      transform: translateY(0%);
-    }
+    // @media (min-width: 1512px) {
+    //   transform: translateY(-0%);
+    // }
+    // @media (min-width: 1503px) {
+    //   transform: translateY(-9%);
+    // }
+    // @media (min-width: 1440px) {
+    //   transform: translateY(0%);
+    // }
+    // @media (max-width: 1439px) {
+    //   transform: translateY(0%);
+    // }
 
     @media (max-width: 575.98px) {
       .slightly-move-x & {
@@ -267,19 +267,19 @@
 
       &-desc {
         // .masterplan__dots-wrapper {
-        display: none;
+        // display: none;
         // }
       }
     }
 
-    &-mob {
-      display: none;
+    // &-mob {
+    //   display: none;
 
-      @media (max-width: 575.98px) {
-        display: block;
+    //   @media (max-width: 575.98px) {
+    //     display: block;
 
-      }
-    }
+    //   }
+    // }
   }
 
   &__dots-svg {
@@ -306,11 +306,18 @@
     gap: 4px;
   }
 
+  &__svg-dot-container {
+    display: flex;
+    align-items: center;
+  }
+
   &__svg {
     &-dot {
       position: relative;
       z-index: 9;
-
+      display: flex;
+      justify-content: center;
+      align-items: center;
       button {
         @media (min-width: 2000px) {
           font-size: 10px;
@@ -349,12 +356,29 @@
         }
       }
     }
+    &-dot-right {
+      button {
+        order: 2;
+      }
+    }
   }
   .dot-masterplan__text {
     @media (min-width: 2000px) {
       padding: 0;
     }
     padding-left: 4px;
+  }
+
+  .dot-line-left {
+    width: 47px;
+    height: 1px;
+    background-color: #fff;
+  }
+  .dot-line-right {
+    width: 47px;
+    height: 1px;
+    background-color: #fff;
+    order: 1;
   }
 
   &__dot-square {
