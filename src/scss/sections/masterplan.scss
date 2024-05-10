@@ -252,12 +252,12 @@
     z-index: 1124;
     opacity: 0;
     visibility: hidden;
-    // @include _991-block {
-    //   bottom: initial;
-    //   top: 50%;
-    //   left: 52%;
-    //   transform: translate(-50%, -50%);
-    // }
+    @include _991-block {
+      bottom: initial;
+      top: 50%;
+      left: 52%;
+      transform: translate(-50%, -50%);
+    }
     .vr360 & {
       opacity: 1;
       visibility: visible;
@@ -281,11 +281,11 @@
     }
 
     &-bg {
-      width: 155px;
+      width: 100px;
       height: 33px;
       position: absolute;
       top: 0;
-      left: 0;
+      left: 60%;
       transition: all 0.3s ease;
       background: #5e5e5e1a;
       z-index: -1;

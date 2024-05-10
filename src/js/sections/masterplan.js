@@ -184,45 +184,10 @@ export function masterplan() {
     const videoNight = document.querySelectorAll(".masterplan__img-night");
     const videoDay = document.querySelectorAll(".masterplan__img-day");
 
-    selectNight.forEach(function (button) {
+    selectDay.forEach(function (button) {
         button.addEventListener("click", function () {
             masterplan.classList.add("_active-night")
             masterplan.classList.remove("_active-day")
-
-            selectNight.forEach(function (btn) {
-                btn.classList.remove("_active");
-            });
-
-            button.classList.add("_active");
-
-            videoNight.forEach(function (video) {
-                video.classList.remove("_active");
-            });
-
-            videoNight.forEach(function (video) {
-                video.classList.add("_active");
-            });
-
-            selectDay.forEach(function (btn) {
-                btn.classList.remove("_active");
-            });
-
-            videoDay.forEach(function (video) {
-                video.classList.remove("_active");
-            });
-            const selectorBgs = document.querySelectorAll(".masterplan__selector-bg");
-
-            selectorBgs.forEach(function (selectorBg) {
-                selectorBg.style.left = "0%";
-                selectorBg.style.width = "155px";
-            });
-        });
-    });
-
-    selectDay.forEach(function (button) {
-        button.addEventListener("click", function () {
-            masterplan.classList.add("_active-day")
-            masterplan.classList.remove("_active-night")
 
             selectDay.forEach(function (btn) {
                 btn.classList.remove("_active");
@@ -254,4 +219,41 @@ export function masterplan() {
 
         });
     });
+
+    selectNight.forEach(function (button) {
+        button.addEventListener("click", function () {
+            masterplan.classList.add("_active-day")
+            masterplan.classList.remove("_active-night")
+
+            selectNight.forEach(function (btn) {
+                btn.classList.remove("_active");
+            });
+
+            button.classList.add("_active");
+
+            videoNight.forEach(function (video) {
+                video.classList.remove("_active");
+            });
+
+            videoNight.forEach(function (video) {
+                video.classList.add("_active");
+            });
+
+            selectDay.forEach(function (btn) {
+                btn.classList.remove("_active");
+            });
+
+            videoDay.forEach(function (video) {
+                video.classList.remove("_active");
+            });
+            const selectorBgs = document.querySelectorAll(".masterplan__selector-bg");
+
+            selectorBgs.forEach(function (selectorBg) {
+                selectorBg.style.left = "0%";
+                selectorBg.style.width = "155px";
+            });
+        });
+    });
+
+
 }
