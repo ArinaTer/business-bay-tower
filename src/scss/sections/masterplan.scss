@@ -345,7 +345,7 @@
     align-items: center;
     gap: 8px;
     position: relative;
-    opacity: 0.5;
+    // opacity: 0.5;
     transition: 0.4s ease;
     @include _991-block {
       width: 60px;
@@ -363,7 +363,7 @@
     }
 
     &._active {
-      opacity: 1;
+      // opacity: 1;
       @include _991-block {
         filter: invert(1);
       }
