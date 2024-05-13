@@ -162,98 +162,55 @@ export function masterplan() {
 
     const modalClosebtn = document.querySelector('.modal360__close-btn')
 
-    // modalClosebtn.forEach((btn) => {
-    //     btn.addEventListener("click", () => {
-    //         btn.classList.remove("active");
-
-    //         if (btn.classList.contains("hide")) {
-    //             modalClosebtn.forEach((btn) => {
-    //                 btn.classList.remove("hide");
-    //             });
-    //         }
-
-    //     });
-    // });
 
 
-    const selectNight = document.querySelectorAll(
-        ".masterplan__selector-btn-night"
-    );
-    const selectDay = document.querySelectorAll(".masterplan__selector-btn-day");
+    const fullBtn = document.querySelector(".masterplan__selector-btn-full");
+    const highlightBtn = document.querySelector(".masterplan__selector-btn-highlight");
+    const fullImg = document.querySelector(".masterplan__img-full");
+    const highlightImg = document.querySelector(".masterplan__img-highlight");
+    const btnContainer = document.querySelector(".masterplan__selector-container")
 
-    const videoNight = document.querySelectorAll(".masterplan__img-night");
-    const videoDay = document.querySelectorAll(".masterplan__img-day");
+    let activeBtn = fullBtn;
 
-    selectDay.forEach(function (button) {
-        button.addEventListener("click", function () {
-            masterplan.classList.add("_active-night")
-            masterplan.classList.remove("_active-day")
+    document.querySelector(".masterplan__selector-container").addEventListener("click", function (event) {
+        activeBtn.classList.remove("_active");
+        if (activeBtn === fullBtn) {
+            activeBtn = highlightBtn;
 
-            selectDay.forEach(function (btn) {
-                btn.classList.remove("_active");
-            });
+        } else {
+            activeBtn = fullBtn;
 
-            button.classList.add("_active");
 
-            videoDay.forEach(function (video) {
-                video.classList.remove("_active");
-            });
+        }
+        activeBtn.classList.add("_active");
 
-            videoDay.forEach(function (video) {
-                video.classList.add("_active");
-            });
+        if (activeBtn === fullBtn) {
+            fullImg.classList.add("_active");
+            highlightImg.classList.remove("_active");
+            masterplan.classList.add("_active-full")
+            masterplan.classList.remove("_active-highlight")
+            btnContainer.classList.remove("active-container")
 
-            selectNight.forEach(function (btn) {
-                btn.classList.remove("_active");
-            });
 
-            videoNight.forEach(function (video) {
-                video.classList.remove("_active");
-            });
-            const selectorBgs = document.querySelectorAll(".masterplan__selector-bg");
-
-            selectorBgs.forEach(function (selectorBg) {
-                selectorBg.style.left = "60%";
-                selectorBg.style.width = "100px";
-            });
-
-        });
+        } else {
+            fullImg.classList.remove("_active");
+            highlightImg.classList.add("_active");
+            masterplan.classList.add("_active-highlight")
+            masterplan.classList.remove("_active-full")
+            btnContainer.classList.add("active-container")
+        }
     });
 
-    selectNight.forEach(function (button) {
-        button.addEventListener("click", function () {
-            masterplan.classList.add("_active-day")
-            masterplan.classList.remove("_active-night")
+    document.querySelector(".masterplan__back").addEventListener("click", function() {
+        btnContainer.classList.remove("active-container")
 
-            selectNight.forEach(function (btn) {
-                btn.classList.remove("_active");
-            });
+        highlightBtn.classList.remove("_active");
+        highlightImg.classList.remove("_active");
+        masterplan.classList.remove("_active-highlight")
 
-            button.classList.add("_active");
+        fullBtn.classList.add("_active");
+        fullImg.classList.add("_active");
+        masterplan.classList.add("_active-full")
 
-            videoNight.forEach(function (video) {
-                video.classList.remove("_active");
-            });
-
-            videoNight.forEach(function (video) {
-                video.classList.add("_active");
-            });
-
-            selectDay.forEach(function (btn) {
-                btn.classList.remove("_active");
-            });
-
-            videoDay.forEach(function (video) {
-                video.classList.remove("_active");
-            });
-            const selectorBgs = document.querySelectorAll(".masterplan__selector-bg");
-
-            selectorBgs.forEach(function (selectorBg) {
-                selectorBg.style.left = "0%";
-                selectorBg.style.width = "155px";
-            });
-        });
     });
-
-
 }
