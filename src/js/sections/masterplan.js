@@ -201,7 +201,7 @@ export function masterplan() {
         }
     });
 
-    document.querySelector(".masterplan__back").addEventListener("click", function() {
+    document.querySelector(".masterplan__back").addEventListener("click", function () {
         btnContainer.classList.remove("active-container")
 
         highlightBtn.classList.remove("_active");
@@ -213,4 +213,36 @@ export function masterplan() {
         masterplan.classList.add("_active-full")
 
     });
+
+    const selector = document.querySelector(".masterplan__selector");
+    const screenWidth = window.innerWidth;
+
+    if (screenWidth < 992) {
+
+        selector.addEventListener("click", function () {
+            activeBtn.classList.remove("_active");
+            if (activeBtn === fullBtn) {
+                activeBtn = highlightBtn;
+            } else {
+                activeBtn = fullBtn;
+            }
+            activeBtn.classList.add("_active");
+        
+            if (activeBtn === fullBtn) {
+                fullImg.classList.add("_active");
+                highlightImg.classList.remove("_active");
+                masterplan.classList.add("_active-full");
+                masterplan.classList.remove("_active-highlight");
+                btnContainer.classList.remove("active-container");
+            } else {
+                fullImg.classList.remove("_active");
+                highlightImg.classList.add("_active");
+                masterplan.classList.add("_active-highlight");
+                masterplan.classList.remove("_active-full");
+                btnContainer.classList.add("active-container");
+            }
+        });
+    }
+
+    
 }

@@ -293,6 +293,7 @@
       transform: translate(-50%, 0);
       width: 212px;
       height: 50px;
+      cursor: pointer;
     }
 
     .vr360 & {
@@ -355,6 +356,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      pointer-events: none;
     }
   }
 
@@ -405,10 +407,11 @@
     gap: 10px;
     width: 215px;
     height: 50px;
+    cursor: pointer;
     @include _991-block {
       padding: 0;
       width: 60px;
-      height: 30px;
+      // height: 30px;
     }
 
     &-full {
