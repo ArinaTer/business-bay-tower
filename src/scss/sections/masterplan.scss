@@ -24,16 +24,21 @@
     line-height: 1;
     text-transform: uppercase;
     color: #000;
-
-    @include _575-block {
-      background-color: transparent;
-      border: 0;
-      font-size: 14px;
-      text-transform: capitalize;
-      background-image: none;
-      padding: 10px;
-      width: auto;
+    @include _991-block {
+      font-size: 13px;
+      line-height: 15px;
+      gap: 17px;
     }
+
+    // @include _575-block {
+    //   background-color: transparent;
+    //   border: 0;
+    //   font-size: 14px;
+    //   text-transform: capitalize;
+    //   background-image: none;
+    //   padding: 10px;
+    //   width: auto;
+    // }
   }
 
   &__btn-offer {
@@ -50,7 +55,9 @@
       visibility: visible;
       transition: 0.3s ease 0s;
     }
-
+    @include _991-block {
+      display: none;
+    }
     @include _575-block {
       left: initial;
       left: 36px;
@@ -76,6 +83,16 @@
 
     .masterplan__btn-icon {
       position: relative;
+      @include _991-block {
+        width: 23px;
+        height: 23px;
+      }
+      svg {
+        @include _991-block {
+          width: 23px;
+          height: 23px;
+        }
+      }
       &::after {
         content: "";
         width: 0.75px;
@@ -86,16 +103,10 @@
       }
     }
 
-    @include _575-block {
-      background-color: transparent;
-      border: 0;
-      right: 36px;
-      bottom: 20px;
-      span {
-        span {
-          display: none;
-        }
-      }
+    @include _991-block {
+      padding: 8px 10px 8px 5px;
+      width: auto;
+      right: 10px;
     }
   }
 
@@ -124,7 +135,10 @@
     opacity: 0;
     visibility: hidden;
     z-index: 1124;
+    
+    @include _991-block {
 
+    }
     ._show & {
       opacity: 1;
       visibility: visible;
@@ -154,13 +168,14 @@
       pointer-events: none;
     }
 
-    @include _575-block {
+
+    @include _991-block {
       font-size: 14px;
-      top: 75px;
-      // bottom: 24px;
+      left: 10px;
+      top: initial;
+      bottom: 25px;
       width: auto;
-      left: 36px;
-      padding: 10px 20px;
+      padding: 11px 23px;
       gap: 16px;
       svg {
         width: 20px;
@@ -267,10 +282,17 @@
     opacity: 0;
     visibility: hidden;
     @include _991-block {
+      padding: 10px 15px;
+      align-items: center;
+      flex-direction: initial;
+      justify-content: center;
+      gap: 17px;
       bottom: initial;
-      top: 50%;
-      left: 52%;
-      transform: translate(-50%, -50%);
+      top: 80px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      width: 212px;
+      height: 50px;
     }
 
     .vr360 & {
@@ -282,6 +304,23 @@
       visibility: hidden;
       transition: 0.2s ease 0s;
     }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 10px;
+      padding: 1px;
+      background: linear-gradient(86.49deg, rgba(255, 255, 255, 0.4) 2.87%, rgba(255, 255, 255, 0.0001) 41.09%, rgba(255, 255, 255, 0.0001) 56.99%, rgba(255, 255, 255, 0.1) 97.09%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
   }
   // masterplan__selector-title
   &__selector-title {
@@ -291,6 +330,12 @@
     text-align: center;
     text-transform: uppercase;
     color: #ffffff;
+    @include _991-block {
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 15.26px;
+      text-align: center;
+    }
   }
 
   &__selector-container {
@@ -303,6 +348,14 @@
     // background-color: #252525;
     background-color: #fff;
     transition: all 0s;
+    @include _991-block {
+      width: 60px;
+      height: 30px;
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   &__selector-content {
@@ -311,6 +364,9 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include _991-block {
+      justify-content: center;
+    }
     span {
       font-weight: 600;
       font-size: 13px;
@@ -349,6 +405,11 @@
     gap: 10px;
     width: 215px;
     height: 50px;
+    @include _991-block {
+      padding: 0;
+      width: 60px;
+      height: 30px;
+    }
 
     &-full {
       background-color: #252525;
@@ -524,6 +585,7 @@
 
   .dot-line-left {
     width: 80px;
+    pointer-events: none;
     svg {
       path {
         fill: #191919;
@@ -534,6 +596,7 @@
   .dot-line-right {
     width: 80px;
     order: 1;
+    pointer-events: none;
     svg {
       path {
         fill: #191919;
