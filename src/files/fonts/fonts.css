@@ -45,3 +45,17 @@
 	font-weight: 600;
 	font-style: normal;
 }
+
+@font-face {
+	font-family: 'Raleway';
+	src: url('Raleway-SemiBold.eot');
+	src: local('Raleway Semibold'), local('Raleway-Bold'),
+		url('Raleway-SemiBold.eot?#iefix') format('embedded-opentype'),
+		url('Raleway-SemiBold.woff2') format('woff2'),
+		url('Raleway-SemiBold.woff') format('woff'),
+		url('Raleway-SemiBold.ttf') format('truetype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+

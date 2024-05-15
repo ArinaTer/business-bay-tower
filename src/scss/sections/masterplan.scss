@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: center;
     gap: 22px;
-
+    font-family: $secondfont;
     font-size: 16px;
     line-height: 1;
     text-transform: uppercase;
@@ -258,6 +258,57 @@
     }
   }
 
+  // masterplan__list
+  &__list {
+    background: linear-gradient(0deg, #191919, #191919), linear-gradient(270deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 60.12%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    padding: 16px 23px;
+    width: auto;
+    position: absolute;
+    bottom: 100px;
+    right: 2%;
+    z-index: 1122;
+    opacity: 0;
+    visibility: hidden;
+    @include _991-block {
+      display: none;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 10px;
+      padding: 1px;
+      background: linear-gradient(86.49deg, rgba(255, 255, 255, 0.4) 2.87%, rgba(255, 255, 255, 0.0001) 42.97%, rgba(255, 255, 255, 0.0001) 58.87%, rgba(255, 255, 255, 0.1) 97.09%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    ._show & {
+      opacity: 1;
+      visibility: visible;
+      transition: 0.3s ease 0s;
+    }
+
+    &-text {
+      font-family: $secondfont;
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 140%;
+      color: #FFFFFF;
+    }
+
+  }
+
   // masterplan__selector
   &__selector {
     position: absolute;
@@ -325,6 +376,7 @@
   }
   // masterplan__selector-title
   &__selector-title {
+    font-family: $secondfont;
     font-weight: 600;
     font-size: 18px;
     line-height: 21px;
@@ -370,6 +422,7 @@
       justify-content: center;
     }
     span {
+      font-family: $secondfont;
       font-weight: 600;
       font-size: 13px;
       line-height: 100%;
@@ -547,6 +600,7 @@
         align-items: center;
         justify-content: flex-start;
         font-size: 12px;
+        font-family: $secondfont;
         font-weight: 500;
         line-height: 1.1;
         color: #dcdad5;
@@ -580,6 +634,8 @@
   }
 
   .dot-masterplan__text {
+    font-family: $secondfont;
+    font-variant-numeric: lining-nums proportional-nums;
     transition: 0.4s ease;
     @media (min-width: 2000px) {
       padding: 0;
