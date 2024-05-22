@@ -135,9 +135,8 @@
     opacity: 0;
     visibility: hidden;
     z-index: 1124;
-    
-    @include _991-block {
 
+    @include _991-block {
     }
     ._show & {
       opacity: 1;
@@ -167,7 +166,6 @@
       mask-composite: exclude;
       pointer-events: none;
     }
-
 
     @include _991-block {
       font-size: 14px;
@@ -260,7 +258,12 @@
 
   // masterplan__list
   &__list {
-    background: linear-gradient(0deg, #191919, #191919), linear-gradient(270deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 60.12%);
+    background: linear-gradient(0deg, #191919, #191919),
+      linear-gradient(
+        270deg,
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0) 60.12%
+      );
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -285,7 +288,13 @@
       bottom: 0;
       border-radius: 10px;
       padding: 1px;
-      background: linear-gradient(86.49deg, rgba(255, 255, 255, 0.4) 2.87%, rgba(255, 255, 255, 0.0001) 42.97%, rgba(255, 255, 255, 0.0001) 58.87%, rgba(255, 255, 255, 0.1) 97.09%);
+      background: linear-gradient(
+        86.49deg,
+        rgba(255, 255, 255, 0.4) 2.87%,
+        rgba(255, 255, 255, 0.0001) 42.97%,
+        rgba(255, 255, 255, 0.0001) 58.87%,
+        rgba(255, 255, 255, 0.1) 97.09%
+      );
       -webkit-mask: linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
       -webkit-mask-composite: destination-out;
@@ -304,9 +313,8 @@
       font-weight: 600;
       font-size: 18px;
       line-height: 140%;
-      color: #FFFFFF;
+      color: #ffffff;
     }
-
   }
 
   // masterplan__selector
@@ -366,7 +374,13 @@
       bottom: 0;
       border-radius: 10px;
       padding: 1px;
-      background: linear-gradient(86.49deg, rgba(255, 255, 255, 0.4) 2.87%, rgba(255, 255, 255, 0.0001) 41.09%, rgba(255, 255, 255, 0.0001) 56.99%, rgba(255, 255, 255, 0.1) 97.09%);
+      background: linear-gradient(
+        86.49deg,
+        rgba(255, 255, 255, 0.4) 2.87%,
+        rgba(255, 255, 255, 0.0001) 41.09%,
+        rgba(255, 255, 255, 0.0001) 56.99%,
+        rgba(255, 255, 255, 0.1) 97.09%
+      );
       -webkit-mask: linear-gradient(#fff 0 0) content-box,
         linear-gradient(#fff 0 0);
       -webkit-mask-composite: destination-out;
@@ -591,7 +605,7 @@
           font-size: 10px;
           padding: 9px 10px;
         }
-        border: 1px solid transparent;
+        // border: 1px solid transparent;
         height: 30px;
         border-radius: 10px;
         background-color: #000;
@@ -764,6 +778,7 @@
       button {
         background: #fff;
         transition-delay: 0.1s;
+        // border: 1px solid #fff;
       }
       .dot-masterplan__text {
         color: #000;
@@ -801,7 +816,7 @@
 
     .masterplan__svg-dot:hover {
       button {
-        border: 1px solid #ffffff56;
+        // border: 1px solid #ffffff56;
         background: linear-gradient(
             77deg,
             rgba(255, 255, 255, 0.2) -4.05%,
