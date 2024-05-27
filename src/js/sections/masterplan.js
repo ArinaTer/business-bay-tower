@@ -158,6 +158,7 @@ export function masterplan() {
         modalIframe.innerHTML = ``;
         modal360.classList.remove("active");
         modal360.classList.remove("shadow");
+        document.documentElement.classList.remove("gallery-active");
     }
 
     const modalClosebtn = document.querySelector('.modal360__close-btn')
