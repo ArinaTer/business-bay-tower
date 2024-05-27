@@ -553,6 +553,14 @@
       width: max(calc(var(--aspect-ratio-width) * 3.2 * 1%), 100%);
 
       &-desc {
+        display: none;
+      }
+    }
+    &-mob {
+      display: none;
+
+      @media (max-width: 575.98px) {
+        display: block;
       }
     }
   }

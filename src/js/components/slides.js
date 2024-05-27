@@ -19,17 +19,17 @@ export function slides() {
             modules: [Autoplay, Navigation],
             observer: true,
             observeParents: true,
-            slidesPerView: 4,
+            slidesPerView: 2,
             speed: 800,
             breakpoints: {
                 300: {
                     slidesPerView: 1,
                 },
                 767: {
-                    slidesPerView: 3,
+                    slidesPerView: 2,
                 },
                 992: {
-                    slidesPerView: 4,
+                    slidesPerView: 2,
                 },
             },
             navigation: {

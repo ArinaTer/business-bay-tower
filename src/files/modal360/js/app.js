@@ -6095,6 +6095,7 @@ function setCopyRightTo(destination, isNewLine) {
 function alterParentWindow() {
   const parentHtml = window.parent.document.documentElement;
   const alterClass = 'alter-parent-window';
+  const galleryOpen = 'gallery-active';
   return {
     addClassToAlter(className = alterClass) {
       addClassName(parentHtml, className);
@@ -6106,6 +6107,7 @@ function alterParentWindow() {
       toggleClassName(parentHtml, className);
     },
   };
+
 };
 
 const { addClassToAlter, removeClassToAlter, toggleClassToAlter } = alterParentWindow();
@@ -6116,6 +6118,7 @@ const { addClassToAlter, removeClassToAlter, toggleClassToAlter } = alterParentW
 
 xt.defaults.Hash = false;
 function gallery() {
+  const galleryOpen = 'gallery-active';
   xt.bind("[data-fancybox]", {
     Image: {
       zoom: false,
@@ -6123,10 +6126,10 @@ function gallery() {
     on: {
       initLayout: () => {
         setCopyRightTo('.fancybox__carousel', false);
-        addClassToAlter();
+        addClassToAlter(galleryOpen);
       },
       close: () => {
-        removeClassToAlter();
+        removeClassToAlter(galleryOpen);
       },
     }
   });

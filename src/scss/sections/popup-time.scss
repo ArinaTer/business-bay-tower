@@ -127,7 +127,7 @@
         }
 
         @include _420-block {
-            padding: 20px 16px;
+            padding: 10px 16px;
             gap: 5px;
         }
     }
@@ -226,6 +226,9 @@
             gap: 15px;
             padding: 28px 16px;
         }
+    @include _420-block {
+        padding: 15px 16px;
+    }
     }
 
     // .time-popup__contacts-title

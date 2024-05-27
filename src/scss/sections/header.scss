@@ -464,6 +464,9 @@
     max-width: 400px;
     width: 100%;
     margin: 0 auto;
+    @include _420-block {
+      padding: 20px 0;
+    }
   }
 
   // .header-menu__form-title
@@ -497,6 +500,10 @@
     max-width: 400px;
     @include _575-block {
       gap: 24px;
+    }
+    @include _420-block {
+      gap: 10px;
+      margin-top: 20px;
     }
   }
 
@@ -599,7 +606,8 @@
 .header-menu__phone-number {
   display: flex;
   align-items: center;
-  gap: 10px;
+  justify-content: space-between;
+  // gap: 10px;
   color: #000;
   font-size: 12px;
   font-weight: 400;
@@ -609,10 +617,12 @@
   padding: 3px 10px;
   margin: 0 auto;
   display: none;
+  width: 60%;
   @media (max-width: 479.98px) {
-    display: flex;
+    // display: flex;
   }
   svg {
+    // padding-right: 10px;
     width: 25px;
     height: 25px;
     path {

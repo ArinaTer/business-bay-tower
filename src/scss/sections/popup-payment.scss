@@ -22,8 +22,10 @@
     &__inner {
         width: 100%;
         @include _767-block {
-            height: 80vh;
+            height: auto;
             overflow: scroll;
+        }
+        @include _420-block {
         }
 
         &::-webkit-scrollbar {
@@ -123,7 +125,7 @@
 }
 
 .payment__swiper {
-    max-width: 1068px;
+    max-width: 600px;
     width: 100%;
     margin: 0 auto;
     margin-top: 30px;
@@ -159,9 +161,9 @@
     }
 
     // .payment__swiper-wrapper
-    &-wrapper {
-        justify-content: space-evenly;
-    }
+    // &-wrapper {
+    //     justify-content: space-evenly;
+    // }
 
     // .payment__swiper-slide
     &-slide {
