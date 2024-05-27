@@ -1,5 +1,5 @@
 import { removeClasses } from '../modules/functions.js';
-import { mediaQueryMatches } from '../modules/functions.js'
+import { mediaQueryMatches } from '../modules/functions.js';
 
 export function masterplan() {
     const masterplan = document.querySelector('.masterplan');
@@ -16,10 +16,10 @@ export function masterplan() {
             stagger: 0.1,
             duration: 0.2,
             onComplete: function () {
-                gsap.set(masterplan, { className: 'masterplan _show' })
-                gsap.set(document.body, { className: 'vr360' })
+                gsap.set(masterplan, { className: 'masterplan _show' });
+                gsap.set(document.body, { className: 'vr360' });
                 // setTimeout(() => {
-                gsap.set(intro, { className: 'intro hidden' })
+                gsap.set(intro, { className: 'intro hidden' });
                 // }, 200);
             },
         });
@@ -28,9 +28,9 @@ export function masterplan() {
     function toIntro() {
         gsap.to(toggleTextsIntro, {
             onStart: function () {
-                gsap.set(intro, { className: 'intro' })
-                gsap.set(masterplan, { className: 'masterplan' })
-                gsap.set(document.body, { className: '' })
+                gsap.set(intro, { className: 'intro' });
+                gsap.set(masterplan, { className: 'masterplan' });
+                gsap.set(document.body, { className: '' });
             },
             yPercent: 0,
             opacity: 1,
@@ -43,14 +43,14 @@ export function masterplan() {
 
     openMaster.forEach(btn => {
         btn.addEventListener('click', () => {
-            toMasterplan()
-        })
+            toMasterplan();
+        });
     });
 
     backtoMain.forEach(btn => {
         btn.addEventListener('click', () => {
-            toIntro()
-        })
+            toIntro();
+        });
     });
 
     function calculateAspectRatioDesc(height) {
@@ -85,20 +85,20 @@ export function masterplan() {
             type: "x",
             inertia: true,
         }
-        )
+        );
     });
 
     mm.add('(max-width: 991px)', () => {
-        gsap.set(".masterplan__media", { xPercent: -30 })
-    })
+        gsap.set(".masterplan__media", { xPercent: -30 });
+    });
 
     mm.add('(max-width: 780px)', () => {
-        gsap.set(".masterplan__media", { xPercent: -40 })
-    })
+        gsap.set(".masterplan__media", { xPercent: -40 });
+    });
 
     mm.add('(max-width: 575px)', () => {
-        gsap.set(".masterplan__media", { xPercent: -29 })
-    })
+        gsap.set(".masterplan__media", { xPercent: -29 });
+    });
 
 
     const hand = document.querySelector(".masterplan__draggable-hand");
@@ -134,13 +134,14 @@ export function masterplan() {
     function handleDots(dot) {
         const path = dot.getAttribute('data-modal360');
 
-        const dotTextTitle = dot.querySelector(".dot-masterplan__text")
-        const dotTextNum = dot.querySelector(".dot-masterplan__num")
+        const dotTextTitle = dot.getAttribute('data-text') ? dot.getAttribute('data-text') : dot.querySelector(".dot-masterplan__text").innerHTML;
+        const dotTextNum = dot.querySelector(".dot-masterplan__num");
+
         const closeTextBtn = document.querySelector(".modal360__close-btn h5");
         const closeTextP = document.querySelector(".modal360__close-btn p");
 
         modalIframe.innerHTML = `<iframe src="${path}" style="" frameborder="0"></iframe>`;
-        closeTextP.innerHTML = dotTextTitle.innerHTML;
+        closeTextP.innerHTML = dotTextTitle;
         closeTextBtn.innerHTML = dotTextNum?.innerHTML;
 
         if (closeTextBtn.innerHTML === 'undefined' || closeTextBtn.innerHTML === '') {
@@ -161,7 +162,7 @@ export function masterplan() {
         document.documentElement.classList.remove("gallery-active");
     }
 
-    const modalClosebtn = document.querySelector('.modal360__close-btn')
+    const modalClosebtn = document.querySelector('.modal360__close-btn');
 
 
 
@@ -169,7 +170,7 @@ export function masterplan() {
     const highlightBtn = document.querySelector(".masterplan__selector-btn-highlight");
     const fullImg = document.querySelector(".masterplan__img-full");
     const highlightImg = document.querySelector(".masterplan__img-highlight");
-    const btnContainer = document.querySelector(".masterplan__selector-container")
+    const btnContainer = document.querySelector(".masterplan__selector-container");
 
     let activeBtn = fullBtn;
 
@@ -188,30 +189,30 @@ export function masterplan() {
         if (activeBtn === fullBtn) {
             fullImg.classList.add("_active");
             highlightImg.classList.remove("_active");
-            masterplan.classList.add("_active-full")
-            masterplan.classList.remove("_active-highlight")
-            btnContainer.classList.remove("active-container")
+            masterplan.classList.add("_active-full");
+            masterplan.classList.remove("_active-highlight");
+            btnContainer.classList.remove("active-container");
 
 
         } else {
             fullImg.classList.remove("_active");
             highlightImg.classList.add("_active");
-            masterplan.classList.add("_active-highlight")
-            masterplan.classList.remove("_active-full")
-            btnContainer.classList.add("active-container")
+            masterplan.classList.add("_active-highlight");
+            masterplan.classList.remove("_active-full");
+            btnContainer.classList.add("active-container");
         }
     });
 
     document.querySelector(".masterplan__back").addEventListener("click", function () {
-        btnContainer.classList.remove("active-container")
+        btnContainer.classList.remove("active-container");
 
         highlightBtn.classList.remove("_active");
         highlightImg.classList.remove("_active");
-        masterplan.classList.remove("_active-highlight")
+        masterplan.classList.remove("_active-highlight");
 
         fullBtn.classList.add("_active");
         fullImg.classList.add("_active");
-        masterplan.classList.add("_active-full")
+        masterplan.classList.add("_active-full");
 
     });
 
@@ -228,7 +229,7 @@ export function masterplan() {
                 activeBtn = fullBtn;
             }
             activeBtn.classList.add("_active");
-        
+
             if (activeBtn === fullBtn) {
                 fullImg.classList.add("_active");
                 highlightImg.classList.remove("_active");
@@ -245,5 +246,5 @@ export function masterplan() {
         });
     }
 
-    
+
 }
