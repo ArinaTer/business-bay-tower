@@ -16,6 +16,8 @@
         height: auto;
         padding: 0;
         background-color: #fff;
+        border-radius: 20px;
+
         @include _991-block {
             max-width: 700px;
             height: 70vh;
@@ -23,6 +25,8 @@
 
         @include _767-block {
             max-width: 400px;
+            border-radius: 10px;
+
         }
     }
 

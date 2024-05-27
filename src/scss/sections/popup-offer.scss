@@ -12,6 +12,7 @@
         width: 100%;
         height: auto;
         padding: 0;
+        border-radius: 20px;
         @include _767-block {
             max-width: 350px;
         }
@@ -36,10 +37,12 @@
     &__inner {
         display: grid;
         grid-template-columns: 1fr 1fr;
-
+        border-radius: 20px;
+        overflow: hidden;
         @include _767-block {
             // height: 80vh;
             // overflow: scroll;
+            border-radius: 10px;
             grid-template-columns: 1fr;
         }
     }
@@ -213,6 +216,8 @@
             line-height: 1.7;
             transition: all 0.3s ease-out 0s;
             font-weight: 400;
+            border-radius: 10px;
+
 
             @include _991-block {
                 line-height: 1.1;

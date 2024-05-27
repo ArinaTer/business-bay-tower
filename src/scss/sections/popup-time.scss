@@ -11,9 +11,10 @@
         padding: 0;
         background-color: #fff;
         height: auto;
-
+        border-radius: 20px;
         @include _767-block {
             max-width: 440px;
+            border-radius: 10px;
         }
     }
 
@@ -35,8 +36,10 @@
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-
+        border-radius: 20px;
+        overflow: hidden;
         @include _767-block {
+            border-radius: 10px;
         }
     }
 
@@ -183,7 +186,7 @@
         padding: 10px;
         gap: 32px;
         font-weight: 400;
-
+        border-radius: 10px;
         transition: all 0.3s ease-out 0s;
         border: 1px solid black;
 

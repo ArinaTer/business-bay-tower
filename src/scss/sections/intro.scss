@@ -361,6 +361,8 @@
         width: 267px;
         height: 240px;
         display: block;
+        border-radius: 10px;
+
         @include _991-block {
             height: auto;
             max-width: 300px;
@@ -416,7 +418,6 @@
         top: 50%;
         right: 0;
         transform: translate(-25%, -50%);
-
         @include _991-block {
             position: static;
             transform: translate(0, 0);

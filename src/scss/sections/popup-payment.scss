@@ -3,14 +3,16 @@
 
     // .payment-popup__wrapper
     &__wrapper {
-        max-width: 1168px;
+        max-width: 937px;
         width: 100%;
         background-color: #fff;
         height: auto;
         padding: 0;
+        border-radius: 20px;
 
         @include _767-block {
             max-width: 400px;
+            border-radius: 10px;
         }
     }
 
@@ -146,7 +148,7 @@
         align-items: center;
         justify-content: space-between;
         margin: 0 auto;
-        max-width: 930px;
+        max-width: 530px;
         width: 100%;
         overflow: hidden;
     }

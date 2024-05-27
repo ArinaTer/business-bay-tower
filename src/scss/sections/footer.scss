@@ -228,6 +228,7 @@
         text-align: center;
         text-transform: uppercase;
         color: #000000;
+        border-radius: 10px;
 
         @include _767-block {
             // width: 32%;
