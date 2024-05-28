@@ -538,7 +538,7 @@
     button {
       display: flex;
       align-items: center;
-      background: #ada08c;
+      // background: #ada08c;
       gap: 10px;
       width: 100%;
       padding: 8px 0;
@@ -546,20 +546,45 @@
       font-size: 14px;
       line-height: 150%;
       text-transform: uppercase;
-      color: #000000;
-      border: 1px solid #ada08c;
+      color: #fff;
+      // border: 1px solid #ada08c;
       font-weight: 400;
       border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background-image: linear-gradient(135deg, #9b9b9b36 30%, #00000000 0%);
+      background-origin: border-box;
+      background-clip: padding-box, border-box;
+      background-size: 200% 100%;
+      transition: background-position 0.5s ease-out;
+      background-position: 400% 100%;
+      background-color: rgba(0, 0, 0);
+
 
       &::after {
         content: url("https://d3b6muno9lbfvx.cloudfront.net/valori-vr/img/icons/long-arrow.svg");
         line-height: 0;
+        filter: invert(1);
+      }
+      &:hover {
+        background-position: 210% 100%;
+        color: #fff;
+        svg {
+          transform: translateX(20%);
+        }
+      }
+  
+      svg {
+        transition: all 0.3s ease;
+        path {
+          stroke: white !important;
+          fill: #ffff;
+        }
       }
 
-      &:hover {
-        color: #000000;
-        background-color: transparent;
-      }
+      // &:hover {
+      //   color: #000000;
+      //   background-color: transparent;
+      // }
     }
   }
 
