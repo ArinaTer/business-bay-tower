@@ -2898,7 +2898,7 @@ main {
   z-index: 1;
 }
 
-.active-ext-slides .viewer__btn-swap_ext {
+.active-int-slides .viewer__btn-swap_ext {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -2908,7 +2908,7 @@ main {
   z-index: 2;
 }
 
-.active-int-slides .viewer__btn-swap_int {
+.active-ext-slides .viewer__btn-swap_int {
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
@@ -3562,11 +3562,11 @@ main {
     pointer-events: auto;
   }
 
-  .active-ext-slides .viewer__btn-swap_ext {
+  .active-int-slides .viewer__btn-swap_ext {
     pointer-events: none;
   }
 
-  .active-int-slides .viewer__btn-swap_int {
+  .active-ext-slides .viewer__btn-swap_int {
     pointer-events: none;
   }
 }
@@ -3648,12 +3648,24 @@ main {
     height: 25px;
   }
 
+  .active-int-slides .viewer__btn-swap_ext {
+    color: #fff;
+    pointer-events: auto;
+  }
+
   .active-ext-slides .viewer__btn-swap_ext {
     color: #808080;
+    pointer-events: none;
+  }
+
+  .active-ext-slides .viewer__btn-swap_int {
+    color: #fff;
+    pointer-events: auto;
   }
 
   .active-int-slides .viewer__btn-swap_int {
     color: #808080;
+    pointer-events: none;
   }
 
   .viewer .swiper-slide img {
