@@ -3626,6 +3626,7 @@ main {
 
   .viewer__btn button {
     color: #fff;
+    background-color: transparent;
   }
 
   .viewer__btn-swap {
@@ -3670,6 +3671,10 @@ main {
 
   .viewer .swiper-slide img {
     padding: 0 1px 0 0;
+  }
+
+  .viewer .psv-navbar::after {
+    background: transparent;
   }
 
   .navigation-viewer {
