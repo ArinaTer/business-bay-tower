@@ -26,10 +26,6 @@ Clone the repository to your local machine:
 
 git clone https://github.com/ArinaTer/business-bay-tower.git
 
-Navigate to the project directory:
-
-cd business-bay-tower-360
-
 📦 Install Dependencies Ensure you have Node.js installed, then run:
 
 npm install
